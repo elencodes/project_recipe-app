@@ -1,12 +1,38 @@
-# yee-daa
-
-# Инструкция к спринту №7 по [ссылке](https://docs.google.com/document/d/1NYLXg9Vu8NoPQsb2zd5-Ky-Ns9JqjbIe1Wrg1RMmYOw/edit?usp=sharing)
+<div id="header">
+<h1>YeeDaa - an application for creating step-by-step recipes</h1>
+	<p>A Single Page Application  (SPA) using the Google Books API allows you to find books based on various criteria (title, author, keyword) and get detailed information about them, including covers, genres and annotations. Built using Typescript, React and Redux.</p>
+<h2>Application link:</h2>
+<a href="https://elencodes.github.io/project_recipe-app/">YeeDaa</a>
+<h2>Used technologies:</h2>
+	<ul type="circle" id=technologies>
+		<li><img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"></li>
+		<li><img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"></li>
+		<li><img src="https://img.shields.io/badge/redux%20toolkit-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white"></li>
+		<li><img src="https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white"></li>
+		<li><img src="https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white)"></li>
+        <li><img src="https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e"></li>
+        <li><img src="https://img.shields.io/badge/vite-%23CCD3FF?style=for-the-badge&logo=vite&logoColor=%23FFB600&color=%23827FFF"></li>
+		<li><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></li>
+		<li><img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"></li>
+	</ul>
+<h2>Application functionality:</h2>
+<ul>
+  <li>The "Library" page will display the top 100 books by default. Books are cards derived from the book cover image, book title and author name. A book card can be added to favorites or removed from the screen if it is not interesting.</li>
+  <li>Using the search bar, you can find the books or authors you are interested in. You can search in both English and Russian. The maximum number of search results returned is 30.</li>
+  <li>To optimize data loading from the server and sequential display of content, page-by-page pagination is used (step is 10 cards).</li>
+  <li>Filtering has been implemented: to view all book cards ("All books"), added to favorites ("Favorites") and created book cards ("New books"). The "All books" filter is set by default.</li>
+  <li>When you click on the card, the "Book Page" opens with its data: cover, title, all genres, all authors, description. The function of adding to favorites and deleting is also available.</li>
+  <li>On the "Add Book Page", a form of adding a new book to the library has been implemented (with validation hints for correct data entry). When a card is successfully added, a notification appears, and the card itself can be found on the "Library" page in the active filter "New books".</li>
+</ul>
+<h2>Developed by:</h2> 
+<div id=bages>
+	<p><a href="https://github.com/elencodes"><img src="https://img.shields.io/badge/ELENA-2E2844?style=for-the-badge&logo=github"></a></p>
+  <p>Contacts: <a href="https://t.me/elencodes">Telegram</a> | <a href="mailto:esadikova.codes@gmail.com">E-mail</a></p>
+</div>
 
 ---
 
-## !ВАЖНО! Категорически запрещено менять тесты, конфиги и любые другие стартовые настройки проекта без ТЗ или согласования с ментором.
-
-## За нарушением данных правил последует отстранение от участия в марафоне!
+## Обращаем внимание на то, что для корректного запуска проекта версия ноды должна быть не ниже 20
 
 ---
 
@@ -40,12 +66,6 @@
 В новом терминале выполните:
 `nvm install node`
 
----
-
-## Обращаем внимание на то, что для корректного запуска проекта версия ноды должна быть не ниже 20
-
----
-
 #### 2. Установка Yarn
 
 Установка через npm (пакетный менеджер Node.js)
@@ -78,70 +98,5 @@
 | `yarn build`     | `Сборка проекта`                     |
 | `lint:fix`       | `Запуск esline для для ts(x) файлов` |
 | `yarn cy:e2e`    | `Запуск e2e тестов cypress`          |
-
----
-
-#### Прекоммитные проверки
-
-В этом проекте используются прекоммитные проверки, настроенные через [lefthook](https://www.npmjs.com/package/lefthook). Они автоматически проверяют и форматируют изменения перед коммитом.
-
-**Как это работает:**
-
-[lefthook](https://www.npmjs.com/package/lefthook) запускает заданные команды только для файлов, добавленных в коммит. Это позволяет автоматически форматировать и проверять только измененные файлы, что помогает поддерживать высокое качество кода в проекте.
-
-Из-за прекоммитных проверок могут возникнуть проблемы при попытке сделать коммит, если ваш код не соответствует установленным правилам форматирования или стилю кода.
-
-Прекоммитные проверки запускаются перед каждым коммитом и проверяют/форматируют файлы с расширениями .ts, .tsx, .js, .jsx, .json и .css с помощью [prettier](https://classic.yarnpkg.com/en/package/prettier), [eslint](https://classic.yarnpkg.com/en/package/eslint) и [stylelint](https://classic.yarnpkg.com/en/package/stylelint).
-
-**Если у вас возникли проблемы** с коммитом из-за прекоммитных проверок, рекомендуется проверить вывод консоли на наличие предупреждений или ошибок, а затем **внести необходимые изменения в соответствии с правилами форматирования и стиля кода**.
-
----
-
-#### Рекомендации к именам коммитов
-
--   Названия коммитов следует соблюдать согласно [гайдлайну](https://www.conventionalcommits.org/en/v1.0.0/)
--   Тип коммита может быть только в нижнием регистре (`feat`, `fix`, `refactor`, `docs` и т.д.)
--   (_) - Указывает область изменений.
-    В данном случае _ означает, что изменения касаются всей кодовой базы или не относятся к одной конкретной области.
-    Обычно вместо \* могут быть указаны конкретные модули, файлы или компоненты, например: feat(ui):, feat(api):, feat(auth):.
--   Может использоваться present tense ("add feature" not "added feature")
--   Может использоваться imperative mood ("move cursor to..." not "moves cursor to...")
-
-#### Примеры имен коммитов
-
--   `init` - используется для начала проекта/таска. Примеры:
-
-```
-init(package): start sprint-1
-init(*): start html-coding task
-```
-
--   `feat` - это реализованная новая функциональность из технического задания (добавил поддержку зумирования, добавил footer, добавил карточку продукта). Примеры:
-
-```
-feat(*): add basic page layout
-feat(search-input): implement search box
-```
-
--   `fix` - исправил ошибку в ранее реализованной функциональности. Примеры:
-
-```
-fix(*): change layout for video items to fix bugs
-fix(header): relayout header for firefox
-```
-
--   `refactor` - новой функциональности не добавлял / поведения не менял. Файлы в другие места положил, удалил, добавил. Изменил форматирование кода (white-space, formatting, missing semi-colons, etc). Улучшил алгоритм, без изменения функциональности. Примеры:
-
-```
-refactor(*): change the structure of the project
-refactor(constants): rename vars for better readability
-```
-
--   `docs` - используется при работе с документацией/readme проекта. Примеры:
-
-```
-docs(*): update readme with additional information
-docs(readme): update description of run() method
-```
 
 ---
