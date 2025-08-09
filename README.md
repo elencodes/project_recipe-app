@@ -2,7 +2,7 @@
 <h1>YeeDaa: A service for your culinary dishes</h1>
 <p>A modern web application with step-by-step recipes, created in the SPA format. It allows users to create, edit, view and save recipes, as well as share their experiences and recommendations. Smart search and filtering make it easy to find the dishes you need, a personal account with clear statistics helps track your culinary progress. The app also supports authorization and interaction with content from bloggers. Developed as part of the Clevertec marathon using React, TypeScript, Redux Toolkit and Chakra UI component library.</p>
 <h2>Deploy:</h2>
-<a href="https://clevertecfrontendlab.github.io/elencodes/)">YeeDaa</a>
+<a href="https://clevertecfrontendlab.github.io/elencodes/">YeeDaa</a>
 <h2>Functional:</h2>
 	<ul>
 		  <li><b>Authorization and authentication:</b> Secure login and registration system for new users.</li>
