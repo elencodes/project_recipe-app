@@ -1,17 +1,10 @@
 <div id="header">
 <h1>YeeDaa: A service for your culinary dishes</h1>
 <p>A modern web application with step-by-step recipes, created in the SPA format. It allows users to create, edit, view and save recipes, as well as share their experiences and recommendations. Smart search and filtering make it easy to find the dishes you need, a personal account with clear statistics helps track your culinary progress. The app also supports authorization and interaction with content from bloggers. Developed as part of the Clevertec marathon using React, TypeScript, Redux Toolkit and Chakra UI component library.</p>
+<img src="https://github.com/elencodes/project_recipe-app/blob/main/public/github/promo.JPG" height="1000">
 <h2>Deploy:</h2>
 <a href="https://clevertecfrontendlab.github.io/elencodes/">YeeDaa</a>
-<h2>Functional:</h2>
-	<ul>
-		  <li><b>Authorization and authentication:</b> Secure login and registration system for new users.</li>
-		  <li><b>Recipes:</b> Create, edit, view and favorite step-by-step instructions.</li>
-		  <li><b>Search:</b> Use convenient filters to find the most suitable recipe.</li>
-		  <li><b>Bloggers:</b> Read and get inspired by proven recipes, leave notes and recommendations.</li>
-		  <li><b>Personal account:</b> Track the dynamics of your progress with the help of clear statistics.</li>
-	</ul>
-<h2>Used technologies:</h2>
+	<h2>Used technologies:</h2>
 	<ul type="circle" id=technologies>
 		<li><img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"></li>
 		<li><img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"></li>
@@ -23,6 +16,18 @@
 		<li><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></li>
 		<li><img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"></li>
 	</ul>
+<h2>Functional:</h2>
+	<ul>
+		  <li><b>Authorization and authentication:</b> Secure login and registration system for new users.</li>
+		  <li><b>Recipes:</b> Create, edit, view and favorite step-by-step instructions.</li>
+		  <li><b>Search:</b> Use convenient filters to find the most suitable recipe.</li>
+		  <li><b>Bloggers:</b> Read and get inspired by proven recipes, leave notes and recommendations.</li>
+		  <li><b>Personal account:</b> Track the dynamics of your progress with the help of clear statistics.</li>
+	</ul>
+
+<img src="https://github.com/elencodes/project_recipe-app/blob/main/public/github/mobile-login-page.png" height="380">
+<img src="https://github.com/elencodes/project_recipe-app/blob/main/public/github/mobile-menu-page.png" height="380">
+<img src="https://github.com/elencodes/project_recipe-app/blob/main/public/github/mobile-profile-page.png" height="380">
 	
 ---
 
