@@ -1,147 +1,44 @@
-# yee-daa
-
-# Инструкция к спринту №7 по [ссылке](https://docs.google.com/document/d/1NYLXg9Vu8NoPQsb2zd5-Ky-Ns9JqjbIe1Wrg1RMmYOw/edit?usp=sharing)
-
+<div id="header">
+<h1>YeeDaa: A service for your culinary dishes</h1>
+<p>A modern web application with step-by-step recipes, created in the SPA format. It allows users to create, edit, view and save recipes, as well as share their experiences and recommendations. Smart search and filtering make it easy to find the dishes you need, a personal account with clear statistics helps track your culinary progress. The app also supports authorization and interaction with content from bloggers. Developed as part of the Clevertec marathon using React, TypeScript, Redux Toolkit and Chakra UI component library.</p>
+<h2>Deploy:</h2>
+<a href="https://clevertecfrontendlab.github.io/elencodes/">YeeDaa</a>
+<h2>Functional:</h2>
+	<ul>
+		  <li><b>Authorization and authentication:</b> Secure login and registration system for new users.</li>
+		  <li><b>Recipes:</b> Create, edit, view and favorite step-by-step instructions.</li>
+		  <li><b>Search:</b> Use convenient filters to find the most suitable recipe.</li>
+		  <li><b>Bloggers:</b> Read and get inspired by proven recipes, leave notes and recommendations.</li>
+		  <li><b>Personal account:</b> Track the dynamics of your progress with the help of clear statistics.</li>
+	</ul>
+<h2>Used technologies:</h2>
+	<ul type="circle" id=technologies>
+		<li><img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"></li>
+		<li><img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"></li>
+		<li><img src="https://img.shields.io/badge/redux%20toolkit-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white"></li>
+		<li><img src="https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white"></li>
+		<li><img src="https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white)"></li>
+	        <li><img src="https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e"></li>
+	        <li><img src="https://img.shields.io/badge/vite-%23CCD3FF?style=for-the-badge&logo=vite&logoColor=%23FFB600&color=%23827FFF"></li>
+		<li><img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"></li>
+		<li><img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"></li>
+	</ul>
+	
 ---
 
-## !ВАЖНО! Категорически запрещено менять тесты, конфиги и любые другие стартовые настройки проекта без ТЗ или согласования с ментором.
+<h2>Installation:</h2> 
 
-## За нарушением данных правил последует отстранение от участия в марафоне!
-
----
-
-## Установка Node.js, npm, nvm, Yarn
-
-Эта инструкция предоставляет пошаговое руководство по установке Node.js, npm, nvm (Node Version Manager) и Yarn на вашем компьютере.
-
-#### 1. Установка Node.js с помощью nvm (Node Version Manager)
-
----
-
-**Windows:**
-
-Скачайте и установите [nvm-windows](https://github.com/coreybutler/nvm-windows).
-
-Откройте терминал (например, Command Prompt или PowerShell) и выполните команду:<br>
-`nvm install latest`
-
----
-
-**macOS:**
-
-Установите nvm через Homebrew:
-`brew install nvm`
-
-Добавьте следующую строку в ваш файл ~/.bashrc, ~/.bash_profile или ~/.zshrc:
-`export NVM_DIR="$HOME/.nvm" [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"`
-
-Используйте ~/.bash_profile или ~/.zshrc, если у вас есть Zsh.
-
-В новом терминале выполните:
-`nvm install node`
-
----
-
-## Обращаем внимание на то, что для корректного запуска проекта версия ноды должна быть не ниже 20
-
----
-
-#### 2. Установка Yarn
-
-Установка через npm (пакетный менеджер Node.js)
-`npm install -g yarn`
-
-| Проверьте версии установленных компонентов | Описание                               |
-| ------------------------------------------ | -------------------------------------- |
-| `node -v`                                  | `Выведет установленную версию Node.js` |
-| `npm -v`                                   | `Выведет установленную версию npm`     |
-| `nvm -v`                                   | `Выведет установленную версию nvm`     |
-| `yarn -v`                                  | `Выведет установленную версию Yarn`    |
-
----
-
-#### 3. Установка и запуска проекта
-
-| Установка и запуска проекта | Описание                                                                                                                                                         |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `node -v`                   | `Проверьте, что у вас надлежащая версия ноды. Если версия ноды ниже 20, то выполните 2 инструкции ниже. Если всё ок - переходи к установке зависимостей проекта` |
-| `nvm install 22.8.0`        | `Установить версию Node.js 22.8.0 с использованием Node Version Manager (nvm)`                                                                                   |
-| `nvm use 22.8.0`            | `Активировать установленную версию Node.js 22.8.0`                                                                                                               |
-| `yarn install`              | `Установить зависимости проекта с помощью Yarn`                                                                                                                  |
-| `yarn start`                | `Запустить проект`                                                                                                                                               |
-
----
-
-| Основные команды | Описание                             |
+| Description | Basic Commands                             |
 | ---------------- | ------------------------------------ |
-| `yarn start`     | `Запуск проекта`                     |
-| `yarn build`     | `Сборка проекта`                     |
-| `lint:fix`       | `Запуск esline для для ts(x) файлов` |
-| `yarn cy:e2e`    | `Запуск e2e тестов cypress`          |
+| `Clone the repository` | `git clone https://github.com/elencodes/project_recipe-app.git` |
+| `Navigate to the project directory` |  `cd project_recipe-app` |
+| `Install dependencies` | `yarn install` |
+| `Start the application`  | `yarn start` |
 
 ---
 
-#### Прекоммитные проверки
-
-В этом проекте используются прекоммитные проверки, настроенные через [lefthook](https://www.npmjs.com/package/lefthook). Они автоматически проверяют и форматируют изменения перед коммитом.
-
-**Как это работает:**
-
-[lefthook](https://www.npmjs.com/package/lefthook) запускает заданные команды только для файлов, добавленных в коммит. Это позволяет автоматически форматировать и проверять только измененные файлы, что помогает поддерживать высокое качество кода в проекте.
-
-Из-за прекоммитных проверок могут возникнуть проблемы при попытке сделать коммит, если ваш код не соответствует установленным правилам форматирования или стилю кода.
-
-Прекоммитные проверки запускаются перед каждым коммитом и проверяют/форматируют файлы с расширениями .ts, .tsx, .js, .jsx, .json и .css с помощью [prettier](https://classic.yarnpkg.com/en/package/prettier), [eslint](https://classic.yarnpkg.com/en/package/eslint) и [stylelint](https://classic.yarnpkg.com/en/package/stylelint).
-
-**Если у вас возникли проблемы** с коммитом из-за прекоммитных проверок, рекомендуется проверить вывод консоли на наличие предупреждений или ошибок, а затем **внести необходимые изменения в соответствии с правилами форматирования и стиля кода**.
-
----
-
-#### Рекомендации к именам коммитов
-
--   Названия коммитов следует соблюдать согласно [гайдлайну](https://www.conventionalcommits.org/en/v1.0.0/)
--   Тип коммита может быть только в нижнием регистре (`feat`, `fix`, `refactor`, `docs` и т.д.)
--   (_) - Указывает область изменений.
-    В данном случае _ означает, что изменения касаются всей кодовой базы или не относятся к одной конкретной области.
-    Обычно вместо \* могут быть указаны конкретные модули, файлы или компоненты, например: feat(ui):, feat(api):, feat(auth):.
--   Может использоваться present tense ("add feature" not "added feature")
--   Может использоваться imperative mood ("move cursor to..." not "moves cursor to...")
-
-#### Примеры имен коммитов
-
--   `init` - используется для начала проекта/таска. Примеры:
-
-```
-init(package): start sprint-1
-init(*): start html-coding task
-```
-
--   `feat` - это реализованная новая функциональность из технического задания (добавил поддержку зумирования, добавил footer, добавил карточку продукта). Примеры:
-
-```
-feat(*): add basic page layout
-feat(search-input): implement search box
-```
-
--   `fix` - исправил ошибку в ранее реализованной функциональности. Примеры:
-
-```
-fix(*): change layout for video items to fix bugs
-fix(header): relayout header for firefox
-```
-
--   `refactor` - новой функциональности не добавлял / поведения не менял. Файлы в другие места положил, удалил, добавил. Изменил форматирование кода (white-space, formatting, missing semi-colons, etc). Улучшил алгоритм, без изменения функциональности. Примеры:
-
-```
-refactor(*): change the structure of the project
-refactor(constants): rename vars for better readability
-```
-
--   `docs` - используется при работе с документацией/readme проекта. Примеры:
-
-```
-docs(*): update readme with additional information
-docs(readme): update description of run() method
-```
-
----
+<h2>Developed by:</h2> 
+<div id=bages>
+	<p><a href="https://github.com/elencodes"><img src="https://img.shields.io/badge/ELENA-2E2844?style=for-the-badge&logo=github"></a></p>
+  <p>Contacts: <a href="https://t.me/elencodes">Telegram</a> | <a href="mailto:esadikova.codes@gmail.com">E-mail</a></p>
+</div>
